@@ -1,7 +1,11 @@
 const display = document.getElementById("input");
 
 function appendToDisplay(input){
-    display.innerText += input;
+    if (display.innerText === "0") {
+        display.innerText = input;
+    } else {
+        display.innerText += input;
+    }
 }
 
 function clearDisplay(){
